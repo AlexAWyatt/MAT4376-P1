@@ -1,0 +1,83 @@
+# DRAW OUT AND LABEL PERCENTAGE DIFFERENCES FOR THESE FINAL GRAPHS - DO THEM FOR TRUMP AND CLINTON
+
+layered_Arizona_phone = alt.Chart(fin_df_Arizona_phone).transform_fold(
+    ['All Polls (Trump)','Grade B and Above (Trump)'], as_=['Grades','Percentage']).mark_bar(opacity=1).encode(
+    x = alt.X('label:N', axis=alt.Axis( title = '')),
+    y = alt.Y('Percentage:Q', scale = alt.Scale(domain = [35,50]), stack=None),
+    #column = 'label:N',
+    color = alt.Color('Grades:N',scale = alt.Scale(domain=domain_1, range=range_1),legend = alt.Legend(legendX = -50))).properties(width=125)
+
+layered_Arizona_online = alt.Chart(fin_df_Arizona_online).transform_fold(
+    ['Grade B and Above (Trump)', 'All Polls (Trump)'], as_=['Grades','Percentage']).mark_bar(opacity=1).encode(
+    x = alt.X('label:N', axis=alt.Axis( title = '')),
+    y = alt.Y('Percentage:Q', scale = alt.Scale(domain = [35,50]), stack=None, axis=alt.Axis(tickSize = 10, tickCount = 16)),
+    #column = 'label:N',
+    color = alt.Color('Grades:N',scale = alt.Scale(domain=domain_1, range=range_1),legend = alt.Legend(legendX = -50))).properties(width=125)
+
+
+layered_Florida_phone = alt.Chart(fin_df_Florida_phone).transform_fold(
+    ['All Polls (Trump)','Grade B and Above (Trump)'], as_=['Grades','Percentage']).mark_bar(opacity=1).encode(
+    x = alt.X('label:N', axis=alt.Axis( title = '')),
+    y = alt.Y('Percentage:Q', scale = alt.Scale(domain = [35,50]), stack=None),
+    #column = 'label:N',
+    color = alt.Color('Grades:N',scale = alt.Scale(domain=domain_1, range=range_1),legend = alt.Legend(legendX = -50))).properties(width=125)
+
+layered_Florida_online = alt.Chart(fin_df_Florida_online).transform_fold(
+    ['All Polls (Trump)', 'Grade B and Above (Trump)'], as_=['Grades','Percentage']).mark_bar(opacity=1).encode(
+    x = alt.X('label:N', axis=alt.Axis( title = '')),
+    y = alt.Y('Percentage:Q', scale = alt.Scale(domain = [35,50]), stack=None, axis=alt.Axis(labels = False, title = '', tickSize = 10, tickCount = 16)),
+    #column = 'label:N',
+    color = alt.Color('Grades:N',scale = alt.Scale(domain=domain_1, range=range_1),legend = alt.Legend(legendX = -50))).properties(width=125)
+
+################################
+
+layered_North_Carolina_phone = alt.Chart(fin_df_North_Carolina_phone).transform_fold(
+    ['All Polls (Trump)','Grade B and Above (Trump)'], as_=['Grades','Percentage']).mark_bar(opacity=1).encode(
+    x = alt.X('label:N', axis=alt.Axis( title = '')),
+    y = alt.Y('Percentage:Q', scale = alt.Scale(domain = [35,50]), stack=None),
+    #column = 'label:N',
+    color = alt.Color('Grades:N',scale = alt.Scale(domain=domain_1, range=range_1),legend = alt.Legend(legendX = -50))).properties(width=125)
+
+layered_North_Carolina_online = alt.Chart(fin_df_North_Carolina_online).transform_fold(
+    ['Grade B and Above (Trump)', 'All Polls (Trump)'], as_=['Grades','Percentage']).mark_bar(opacity=1).encode(
+    x = alt.X('label:N', axis=alt.Axis( title = '')),
+    y = alt.Y('Percentage:Q', scale = alt.Scale(domain = [35,50]), stack=None, axis=alt.Axis(labels = False, title = '', tickSize = 10, tickCount = 16)),
+    #column = 'label:N',
+    color = alt.Color('Grades:N',scale = alt.Scale(domain=domain_1, range=range_1),legend = alt.Legend(legendX = -50))).properties(width=125)
+
+
+layered_Ohio_phone = alt.Chart(fin_df_Ohio_phone).transform_fold(
+    ['All Polls (Trump)','Grade B and Above (Trump)'], as_=['Grades','Percentage']).mark_bar(opacity=1).encode(
+    x = alt.X('label:N', axis=alt.Axis( title = '')),
+    y = alt.Y('Percentage:Q', scale = alt.Scale(domain = [35,50]), stack=None),
+    #column = 'label:N',
+    color = alt.Color('Grades:N',scale = alt.Scale(domain=domain_1, range=range_1),legend = alt.Legend(legendX = -50))).properties(width=125)
+
+layered_Ohio_online = alt.Chart(fin_df_Ohio_online).transform_fold(
+    ['Grade B and Above (Trump)', 'All Polls (Trump)'], as_=['Grades','Percentage']).mark_bar(opacity=1).encode(
+    x = alt.X('label:N', axis=alt.Axis( title = '')),
+    y = alt.Y('Percentage:Q', scale = alt.Scale(domain = [35,50]), stack=None, axis=alt.Axis(labels = False, title = '', tickSize = 10, tickCount = 16)),
+    #column = 'label:N',
+    color = alt.Color('Grades:N',scale = alt.Scale(domain=domain_1, range=range_1),legend = alt.Legend(legendX = -50))).properties(width=125)
+
+
+layered_Pennsylvania_phone = alt.Chart(fin_df_Pennsylvania_phone).transform_fold(
+    ['All Polls (Trump)','Grade B and Above (Trump)'], as_=['Grades','Percentage']).mark_bar(opacity=1).encode(
+    x = alt.X('label:N', axis=alt.Axis( title = '')),
+    y = alt.Y('Percentage:Q', scale = alt.Scale(domain = [35,50]), stack=None),
+    #column = 'label:N',
+    color = alt.Color('Grades:N',scale = alt.Scale(domain=domain_1, range=range_1),legend = alt.Legend(legendX = -50))).properties(width=125)
+
+layered_Pennsylvania_online = alt.Chart(fin_df_Pennsylvania_online).transform_fold(
+    ['All Polls (Trump)', 'Grade B and Above (Trump)'], as_=['Grades','Percentage']).mark_bar(opacity=1).encode(
+    x = alt.X('label:N', axis=alt.Axis( title = '')),
+    y = alt.Y('Percentage:Q', scale = alt.Scale(domain = [35,50]), stack=None, axis=alt.Axis(labels = False, title = '', tickSize = 10, tickCount = 16)),
+    #column = 'label:N',
+    color = alt.Color('Grades:N',scale = alt.Scale(domain=domain_1, range=range_1), 
+                      legend = alt.Legend(orient = 'bottom'), title = "Pollster Grades")).properties(width=125)
+
+
+(layered_Arizona_phone + layered_Arizona_online | layered_Florida_phone + layered_Florida_online | layered_North_Carolina_phone + layered_North_Carolina_online | layered_Ohio_phone + layered_Ohio_online | layered_Pennsylvania_phone + layered_Pennsylvania_online)
+#layered_Pennsylvania_online
+#layered_Arizona_phone + layered_Arizona_online
+# make combined charts with same title for each state than use | to concatenate them horizantally
